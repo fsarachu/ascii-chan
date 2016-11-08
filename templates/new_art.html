@@ -3,11 +3,11 @@
   <form method="post">
     <label>
       <h3>Title: </h3>
-      <input type="text" name="title">
+      <input type="text" name="title" value="{{ title }}">
     </label>
     <label>
       <h3>Art: </h3>
-      <textarea name="art"></textarea>
+      <textarea name="art">{{ art }}</textarea>
     </label>
     <br>
     <p style="font-weight: bold;">{{ error }}</p>
