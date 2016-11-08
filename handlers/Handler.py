@@ -9,3 +9,7 @@ class Handler(webapp2.RequestHandler):
 
     def write(self, *args, **kwargs):
         self.response.write(*args, **kwargs)
+
+    def render(self, template_name, **kwargs):
+        template = self.JINJA_ENV.get_template(template_name)
+        self.write(template.render(kwargs))
