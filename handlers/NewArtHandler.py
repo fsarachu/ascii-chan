@@ -13,3 +13,4 @@ class NewArtHandler(Handler):
             self.write("Thanks!")
         else:
             error = 'We need both a title and art!'
+            self.render('new_art.html', error=error)
