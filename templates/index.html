@@ -1,7 +1,17 @@
 {% extends "base.html" %}
 {% block content %}
   <h1>ASCII Chan!</h1>
+  <h2>Menu:</h2>
   <ul>
     <li><a href="/new-art">Submit art</a></li>
   </ul>
+  {% if arts %}
+    <h2>Latest Submitted Art</h2>
+    {% for art in arts %}
+      <div>
+        <h3>{{ art.title }}</h3>
+        <pre>{{ art.art }}</pre>
+      </div>
+    {% endfor %}
+  {% endif %}
 {% endblock %}
