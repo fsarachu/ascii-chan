@@ -6,4 +6,10 @@ class NewArtHandler(Handler):
         self.render('new_art.html')
 
     def post(self):
-        pass
+        title = self.request.get('title')
+        art = self.request.get('art')
+
+        if title and art:
+            self.write("Thanks!")
+        else:
+            error = 'We need both a title and art!'
