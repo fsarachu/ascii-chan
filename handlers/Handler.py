@@ -1,7 +1,6 @@
-import os
-
 import webapp2
 import jinja2
+import os
 
 
 class Handler(webapp2.RequestHandler):
